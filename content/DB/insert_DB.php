@@ -32,8 +32,8 @@ while ($member = $c_result->fetch_array()) {
 
 if($c_name == $s_name){
 
-   echo("<script>alert(\"아디 중복이라고\")</script>");
-   echo("<script>location.href='/bank_system/index.php';</script>");
+   echo("<script>alert(\"ID重複です。\")</script>");
+   echo("<script>location.href='/bank_system/index.html';</script>");
    
 
 } else {
@@ -44,8 +44,8 @@ if($c_name == $s_name){
    $result = mysqli_query($db_server, $Insert);
 
    $result;
-   echo("<script>alert(\"가입완료\")</script>");
-   echo("<script>location.href='/bank_system/index.php';</script>");
+   echo("<script>alert(\"登録完了しました。\")</script>");
+   echo("<script>location.href='/bank_system/index.html';</script>");
    
 }
 

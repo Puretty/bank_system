@@ -5,8 +5,8 @@
     $pw = $_POST['userpw'];
 
     if ( ($id== '') || ($pw=='') ) {
-    echo "<script>alert('아디 비번 치삼');
-    location.href='../index.php';</script>";
+    echo "<script>alert('ID or PWを入力してください');
+    location.href='../index.html';</script>";
     exit;
     }
 ?>
@@ -29,13 +29,13 @@
 
             if($result=mysqli_fetch_array(mysqli_query($conn,$sql))){
                 
-            echo("<script>alert(\"$userid\" + \"님 방가방가\")</script>");
+            echo("<script>alert(\"$userid\" + \"ようこそ！\")</script>");
             echo("<script>location.href='./main_view.php';</script>");
             exit;
             
             } else{
-            echo ("<script>alert('비번or아디 틀림')</script>");
-            echo("<script>location.href='../index.php';</script>");
+            echo ("<script>alert('ID or PWが違います。')</script>");
+            echo("<script>location.href='../index.html';</script>");
             exit;
         }
     }

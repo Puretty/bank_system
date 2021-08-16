@@ -23,22 +23,22 @@ include "./DB/main_DB.php";
         <form method="post" action="./DB/remit_DB.php">
 
             <div class="mb-3 container">
-                <input type="number" class="form-control length" name="remit_money" placeholder="송금액" maxlength="10">
+                <input type="number" class="form-control length" name="remit_money" placeholder="送金額" maxlength="10">
             </div>
 
             <div class="mb-3 container">
-                <input type="text" class="form-control length" name="remit_ko" placeholder="상대 계좌 번호(-까지 넣어서)" maxlength="50">
+                <input type="text" class="form-control length" name="remit_ko" placeholder="向こうの口座番号（ーまで入れてください。）" maxlength="50">
             </div>
 
             <div class="mb-3 container">
-                <input type="password" class="form-control length" name="remit_pw" placeholder="내 계좌 비번" maxlength="10">
+                <input type="password" class="form-control length" name="remit_pw" placeholder="口座の暗証番号" maxlength="10">
             </div>
     </div>
 
     <div class="container">
 
-        <input type="submit" value="실행">
-        <input type="button" value="뒤로가기" onclick="history.back();">
+        <input type="submit" value="実行">
+        <input type="button" value="バック" onclick="history.back();">
 
     </div>
     </form>

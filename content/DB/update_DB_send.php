@@ -21,11 +21,11 @@ while($borad = $c_result -> fetch_array()){
    } 
 
 if ( ($u_send== '') || ($u_pw=='') ) {
-    echo "<script>alert('공백 금지임');
+    echo "<script>alert('空欄があります。');
     location.href='../main_view.php';</script>";
     exit;
 } else if ( $u_pw != $user_pw) {
-        echo "<script>alert('비번 틀림');
+        echo "<script>alert('PWが違います。');
         location.href='../main_view.php';</script>>";
     exit;
 }
@@ -33,14 +33,14 @@ if ( ($u_send== '') || ($u_pw=='') ) {
 if ($u_pw == $user_pw) {
     
     if($zeze < $u_send) {
-    echo "<script>alert('잔액이 부족해요');
+    echo "<script>alert('残高が足りないです。');
     location.href='../main_view.php';</script>";
     exit;
     }
 
         $result = mysqli_query($db_server, $sql); 
         $result;
-        echo "<script>alert('출금 성공 이용 ㄳ');
+        echo "<script>alert('成功しました。ご利用ありがとうございます。');
         location.href='../main_view.php';</script>";
 }
 ?>

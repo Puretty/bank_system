@@ -18,7 +18,7 @@
                 url = "./DB/id_check_DB.php?userid=" + userid;
                 window.open(url, "chkid", "witdh=300px, height=100px");
             } else {
-                alert("아이디를 입력하세요");
+                alert("IDを入力してください。");
             }
         }
     </script>
@@ -30,18 +30,18 @@
     <form method="post" action="./DB/insert_DB.php">
 
         <div class="mb-3 container">
-            <input type="text" class="form-control" name="name" id="uid" placeholder="ID" maxlength="20">
-            <input type="button" value="중복검사" onclick="id_check();">
+            <input type="text" class="form-control" name="name" id="uid" placeholder="ID" maxlength="10" style="text-align: center;">
+            <input type="button" value="重複確認" onclick="id_check();">
         </div>
 
         <div class="mb-3 container">
-            <input type="password" class="form-control length" name="pw" placeholder="비번" maxlength="10">
+            <input type="password" class="form-control length" name="pw" placeholder="PW" maxlength="10" style="text-align: center;">
         </div>
 
         <div class="container">
 
-            <input type="submit" value="가입하기">
-            <input type="button" value="뒤로가기" onclick="history.back();">
+            <input type="submit" value="会員登録">
+            <input type="button" value="バック" onclick="history.back();">
             
 
         </div>

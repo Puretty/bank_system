@@ -1,4 +1,3 @@
-
 <?php
 include "./main_DB.php";
 ini_set('display_errors', '0');
@@ -16,12 +15,12 @@ while ($member = $result2->fetch_array()) {
 
 if ($m_id == $check) {
 
-    echo "<script>alert('아이디 중복');
+    echo "<script>alert('重複です。');
     self.close();</script>";
 
 } else {
 
-    echo "<script>alert('사용 가능합니다');
+    echo "<script>alert('ご利用可能です。');
     self.close();</script>";
 
 }

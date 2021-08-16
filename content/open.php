@@ -23,18 +23,18 @@ include "./DB/main_DB.php";
         <form method="post" action="./DB/update_DB.php">
 
             <div class="mb-3 container">
-                <input type="number" class="form-control length" name="open" placeholder="입금액" maxlength="10">
+                <input type="number" class="form-control length" name="open" placeholder="入金額" maxlength="10">
             </div>
 
             <div class="mb-3 container">
-                <input type="password" class="form-control length" name="in_pw" placeholder="계좌 비번" maxlength="10">
+                <input type="password" class="form-control length" name="in_pw" placeholder="口座の暗証番号" maxlength="10">
             </div>
     </div>
 
     <div class="container">
 
-        <input type="submit" value="실행">
-        <input type="button" value="뒤로가기" onclick="history.back();">
+        <input type="submit" value="実行">
+        <input type="button" value="バック" onclick="history.back();">
 
 
     </div>

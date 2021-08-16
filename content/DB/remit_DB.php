@@ -12,11 +12,11 @@ $u_my_pass = $_POST['remit_pw'];
 
 
 if ( ($u_remit_money== '') || ($u_remit_ko=='') || ($u_my_pass=='')) {
-    echo "<script>alert('공백 금지임');
+    echo "<script>alert('空欄があります。');
     location.href='../main_view.php';</script>";
     exit;
 } else if ( $u_my_pass != $user_pw) {
-        echo "<script>alert('비번 틀림');
+        echo "<script>alert('PWが違います。');
         location.href='../main_view.php';</script>>";
     exit;
 }
@@ -44,11 +44,11 @@ if ($u_my_pass == $user_pw) {
         } 
             
             if($zeze < $u_remit_money) {
-                echo "<script>alert('잔액 부족임');
+                echo "<script>alert('残高が足りないです。');
                 location.href='../main_view.php';</script>";
                 exit;
             } else if ($a_ko != $u_remit_ko) {
-                    echo "<script>alert('이런 계좌 없다');
+                    echo "<script>alert('口座番号をご確認ください。');
                     location.href='../main_view.php';</script>";
                     exit;
             } else {
@@ -59,7 +59,7 @@ if ($u_my_pass == $user_pw) {
 
                 $send_result;
                 $add_result;
-                echo "<script>alert('송금 성공 이용 ㄳ');
+                echo "<script>alert('成功しました。ご利用ありがとうございます。');
                 location.href='../main_view.php';</script>";
                 exit;
               }
