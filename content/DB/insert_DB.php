@@ -16,10 +16,12 @@ $number = mt_rand(10000, 20000);
 $number2 = mt_rand(10, 20);
 $number3 = mt_rand(10000, 20000);
 $number4 = mt_rand(5000, 10000);
+$number5 = mt_rand(0001,9999);
 $str = "-";
 
 $s_ko = $number.$str.$number2.$str.$number3;
 $s_ze = $number4;
+$s_zb = $number5;
 
 // 중복값 
 $c_sql = "SELECT * FROM s_sign where s_name = '$s_name'";
@@ -33,19 +35,19 @@ while ($member = $c_result->fetch_array()) {
 if($c_name == $s_name){
 
    echo("<script>alert(\"ID重複です。\")</script>");
-   echo("<script>location.href='/bank_system/index.html';</script>");
+   echo("<script>location.href='http://smoda.kr/woo/index.html';</script>");
    
 
 } else {
 
    $Insert = "INSERT INTO s_sign VALUES (
-      null ,'$s_name','$s_pw', '$s_ko' ,'$s_ze')";
+      null ,'$s_name','$s_pw', '$s_ko' ,'$s_ze', '$s_zb')";
    
    $result = mysqli_query($db_server, $Insert);
 
    $result;
    echo("<script>alert(\"登録完了しました。\")</script>");
-   echo("<script>location.href='/bank_system/index.html';</script>");
+   echo("<script>location.href='http://smoda.kr/woo/index.html';</script>");
    
 }
 

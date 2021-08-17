@@ -10,29 +10,38 @@ $u_remit_money = $_POST['remit_money'];
 $u_remit_ko = $_POST['remit_ko'];
 $u_my_pass = $_POST['remit_pw'];
 
+// 출금액 비교용 쿼리문
+$check = "SELECT * FROM s_sign where s_name = '$user'";   
+$check2 = mysqli_query($db_server, $check);
+
+while($s_borad1 = $check2 -> fetch_array()){
+$zeze = $s_borad1['s_ze'];
+$zbzb = $s_borad1['s_zb'];
+}
 
 if ( ($u_remit_money== '') || ($u_remit_ko=='') || ($u_my_pass=='')) {
     echo "<script>alert('空欄があります。');
     location.href='../main_view.php';</script>";
     exit;
-} else if ( $u_my_pass != $user_pw) {
+} else if ( $u_my_pass != $zbzb) {
         echo "<script>alert('PWが違います。');
         location.href='../main_view.php';</script>>";
     exit;
 }
 
-if ($u_my_pass == $user_pw) {
-    
+if ($u_my_pass == $zbzb) {
+        
         // 출금 쿼리문 내 계좌에서 뺀다 
         $send_sql = "UPDATE s_sign set s_ze = (s_ze - '$u_remit_money') where s_name = '$user'";
 
-        // 출금액 비교용 쿼리문
-        $check = "SELECT * FROM s_sign where s_name = '$user'";   
-        $check2 = mysqli_query($db_server, $check);
+        // // 출금액 비교용 쿼리문
+        // $check = "SELECT * FROM s_sign where s_name = '$user'";   
+        // $check2 = mysqli_query($db_server, $check);
 
-        while($s_borad1 = $check2 -> fetch_array()){
-        $zeze = $s_borad1['s_ze'];
-        }
+        // while($s_borad1 = $check2 -> fetch_array()){
+        // $zeze = $s_borad1['s_ze'];
+        // $zbzb = $s_borad1['s_ze'];
+        // }
 
         // 입력값 받아온 계좌의 주인 찾는 쿼리문 
         $r_sql = "SELECT * from s_sign where s_ko = '$u_remit_ko'";
@@ -64,4 +73,3 @@ if ($u_my_pass == $user_pw) {
                 exit;
               }
         }
-?>

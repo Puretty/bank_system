@@ -23,8 +23,7 @@
             $userid=$_SESSION['userid'];
             $userpw=$_SESSION['userpw'];
 
-            $conn= mysqli_connect('localhost', 'cheol', '4852', 'web_test');
-
+            $conn= mysqli_connect($db_hostname, $db_username, $db_password, $db_database);
             $sql="SELECT * FROM s_sign where s_name='$userid'&&s_pw='$userpw'";
 
             if($result=mysqli_fetch_array(mysqli_query($conn,$sql))){

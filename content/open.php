@@ -23,11 +23,11 @@ include "./DB/main_DB.php";
         <form method="post" action="./DB/update_DB.php">
 
             <div class="mb-3 container">
-                <input type="number" class="form-control length" name="open" placeholder="入金額" maxlength="10">
+                <input type="text" class="form-control length" name="open" placeholder="入金額" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
             </div>
 
             <div class="mb-3 container">
-                <input type="password" class="form-control length" name="in_pw" placeholder="口座の暗証番号" maxlength="10">
+                <input type="password" class="form-control length" name="in_pw" placeholder="口座の暗証番号" maxlength="4">
             </div>
     </div>
 

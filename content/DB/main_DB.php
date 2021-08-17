@@ -1,10 +1,15 @@
 <?php
 
-    $db_hostname = '127.0.0.1'; // 102.168.126.78 방화벽
-    //db_hostname = '192.168.31.41';
-    $db_database = 'web_test'; // 내 db 이름 확인
-    $db_username = 'cheol'; // 내 sql 정보
-    $db_password = '4852';
+    $db_hostname = 'Localhost'; 
+    $db_database = 'w1004mesmg'; 
+    $db_username = 'w1004mesmg'; 
+    $db_password = 'sunmoons1s2s3!';
+
+    // 로컬 확인용
+    // $db_hostname = 'localhost';
+    // $db_database = 'web_test';
+    // $db_username = 'cheol'; 
+    // $db_password = '4852';
 
     $db_server = new mysqli($db_hostname, $db_username, $db_password, $db_database, 3306);
     

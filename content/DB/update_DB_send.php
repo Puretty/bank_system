@@ -18,19 +18,20 @@ $c_result = mysqli_query($db_server, $check);
 //계속 돌려서 바뀐 값 불러오기 
 while($borad = $c_result -> fetch_array()){
     $zeze = $borad['s_ze'];
+    $zbzb = $borad['s_zb'];
    } 
 
 if ( ($u_send== '') || ($u_pw=='') ) {
     echo "<script>alert('空欄があります。');
     location.href='../main_view.php';</script>";
     exit;
-} else if ( $u_pw != $user_pw) {
+} else if ( $u_pw != $zbzb) {
         echo "<script>alert('PWが違います。');
         location.href='../main_view.php';</script>>";
     exit;
 }
 
-if ($u_pw == $user_pw) {
+if ($u_pw == $zbzb) {
     
     if($zeze < $u_send) {
     echo "<script>alert('残高が足りないです。');

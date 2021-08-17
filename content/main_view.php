@@ -20,6 +20,7 @@ while ($board = $result->fetch_array()) {
 
         $u_ko = $board['s_ko'];
         $u_ze = $board['s_ze'];
+        $u_zb = $board['s_zb'];
     }
 }
 
@@ -44,10 +45,12 @@ while ($board = $result->fetch_array()) {
     <br><br>
     
     <?php
-    echo "※口座の暗証番号はログインの時使うPWでございます。<br><br>";
+    // echo "※口座の暗証番号はログインの時使うPWでございます。<br><br>";
     
-    echo "私の口座番号:", $u_ko, "<br>";
+    echo "貴方の口座番号:", $u_ko, "<br>";
     
+    echo "貴方の暗証番号:", $u_zb, "<br>";
+
     echo "残高: ", $u_ze, "円", "<br>";
     
     ?>
