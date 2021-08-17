@@ -7,7 +7,7 @@ $s_name = $_POST['name'];
 $s_pw = $_POST['pw'];
 
 if( ($s_name=='') || ($s_pw=='') )  {
-   echo("<script>alert(\"공백금지\")</script>");
+   echo("<script>alert(\"空欄があります。\")</script>");
    echo("<script>location.href='../member.php';</script>");
    exit;
 }

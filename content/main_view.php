@@ -24,6 +24,18 @@ while ($board = $result->fetch_array()) {
     }
 }
 
+//송금 test용
+$test = "SELECT * FROM s_sign where s_name = 'test'";
+$t_result = mysqli_query($db_server, $test);
+
+while ($board = $t_result->fetch_array()) {
+
+    if ($t_result) {
+
+        $t_ko = $board['s_ko'];
+        $t_ze = $board['s_ze'];
+    }
+}
 
 ?>
 
@@ -45,7 +57,6 @@ while ($board = $result->fetch_array()) {
     <br><br>
     
     <?php
-    // echo "※口座の暗証番号はログインの時使うPWでございます。<br><br>";
     
     echo "貴方の口座番号:", $u_ko, "<br>";
     
@@ -53,6 +64,15 @@ while ($board = $result->fetch_array()) {
 
     echo "残高: ", $u_ze, "円", "<br>";
     
+    //
+    echo "---------------------------------- <br>";
+
+    echo "送金テスト用 <br>";
+    
+    echo "口座番号: ", $t_ko, "<br>";
+
+    echo "残高: ", $t_ze, "円", "<br>";
+
     ?>
 
     <br><br>
